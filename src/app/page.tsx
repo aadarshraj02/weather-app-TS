@@ -70,6 +70,44 @@ export default function Home() {
           </div>
         </div>
       )}
+       {
+        placeData &&
+        <div>
+          <div>
+            <p>Temperature</p>
+            <p>{(placeData?.main.temp - 273.15).toFixed(1)} °C</p>
+          </div>
+
+          <div>
+            <p >Temperature Min</p>
+            <p >{(placeData?.main.temp_min - 273.15).toFixed(1)} °C</p>
+          </div>
+
+          <div>
+            <p >Temperature Max</p>
+            <p >{(placeData?.main.temp_max - 273.15).toFixed(1)} °C</p>
+          </div>
+
+          <div>
+            <p >Humidity</p>
+            <p >{placeData?.main.humidity}</p>
+          </div>
+
+          <div >
+            <p >pressure</p>
+            <p>{placeData?.main.pressure}</p>
+          </div>
+
+          <div>
+            <p >Visibility</p>
+            <p>{placeData?.visibility}</p>
+          </div>
+          <div >
+            <p>Wind Speed</p>
+            <p>{placeData?.wind.speed} km/hr</p>
+          </div>
+        </div>
+      }
     </div>
   );
 }
