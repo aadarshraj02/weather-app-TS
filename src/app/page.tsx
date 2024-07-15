@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { IoSearch } from "react-icons/io5";
 
 let weatherApiKey = "8f6200216e7a219e044fb1179fea87b6";
 
@@ -25,7 +26,7 @@ export default function Home() {
     <div className="h-screen bg-[url('https://images.unsplash.com/photo-1601225691237-b0a1dfa036e0?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center flex flex-col items-center">
       <div>
         <input type="search" placeholder="City Name" onChange={(e)=>setPlace(e.target.value)} />
-        <button onClick={getWeatherData}>Search</button>
+        <button onClick={getWeatherData}>Search<IoSearch /></button>
       </div>
     </div>
   );
