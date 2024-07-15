@@ -58,6 +58,7 @@ export default function Home() {
               {placeData.weather[0].main === "Smokey" && <FaCloud></FaCloud>}
               {placeData.weather[0].main === "Sunny" && <FaCloud></FaCloud>}
               {placeData.weather[0].main === "Clear" && <FaCloud></FaCloud>}
+              <p>{(placeData?.main.temp - 273.15).toFixed(1)} <span>°C</span></p>
             </div>
             <div className="section11"></div>
           </div>
