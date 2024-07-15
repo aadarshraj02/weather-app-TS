@@ -10,6 +10,10 @@ let weatherApiKey = "8f6200216e7a219e044fb1179fea87b6";
 export default function Home() {
   const [place, setPlace] = useState("Mumbai");
   const [placeData, setPlaceData] = useState<any>(null);
+  const currentTime = new Date().toLocaleTimeString([],{
+    hour:'2-digit',
+    minute:'2-digit',
+  })
   
   const getWeatherData = async () => {
     if (place && place.length > 0) {
@@ -40,7 +44,7 @@ export default function Home() {
             <div className="section11"></div>
           </div>
           <div className="time-div">
-            <p className="time"></p>
+            <p className="time">{currentTime}</p>
           </div>
         </div>
       )}
