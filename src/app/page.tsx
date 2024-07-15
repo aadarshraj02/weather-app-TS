@@ -60,7 +60,10 @@ export default function Home() {
               {placeData.weather[0].main === "Clear" && <FaCloud></FaCloud>}
               <p>{(placeData?.main.temp - 273.15).toFixed(1)} <span>°C</span></p>
             </div>
-            <div className="section11"></div>
+            <div className="section11">
+            <p>{placeData?.name}</p>
+            <p>{placeData?.weather[0].main}</p>
+            </div>
           </div>
           <div className="time-div">
             <p className="time">{currentTime}</p>
