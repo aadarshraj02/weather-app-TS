@@ -89,6 +89,10 @@ export default function Home() {
             <p>Humidity</p>
             <p>{placeData?.main.humidity}</p>
           </div>
+          <div>
+            <p>pressure</p>
+            <p>{placeData?.main.pressure}</p>
+          </div>
         </div>
       )}
     </div>
