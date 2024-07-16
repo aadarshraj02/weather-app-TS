@@ -57,10 +57,12 @@ export default function Home() {
                 src={`http://openweathermap.org/img/wn/${placeData.weather[0].icon}@2x.png`}
                 alt={placeData.weather[0].description}
               />
-              <p>{(placeData.main.temp -273.5).toFixed(1)} <span>°C</span></p>
+              <p>{(placeData?.main.temp -273.5).toFixed(1)} <span>°C</span></p>
             </div>
 
-            <div className="section11"></div>
+            <div className="section11">
+              <p>{placeData?.name}</p>
+            </div>
           </div>
           <div className="time-div">
             <p className="time">{currentTime}</p>
