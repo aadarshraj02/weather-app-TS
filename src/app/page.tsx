@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       )}
       {placeData && (
-        <div className="section2 bg-red-500 flex justify-between p-5 gap-10 w-full flex-wrap ">
+        <div className="section2 flex justify-between p-5 gap-10 w-full flex-wrap ">
           <div className="flex items-center text-gray-400 bg-[rgba(0,0,0,.25)] p-6 rounded-lg w-1/3 justify-between">
             <p>Temperature</p>
             <p>{(placeData?.main.temp - 273.15).toFixed(1)} °C</p>
@@ -85,20 +85,20 @@ export default function Home() {
             <p>Temperature Max</p>
             <p>{(placeData?.main.temp_max - 273.15).toFixed(1)} °C</p>
           </div>
-          <div>
+          <div className="flex items-center text-gray-400 bg-[rgba(0,0,0,.25)] p-6 rounded-lg w-1/2 justify-between">
             <p>Humidity</p>
             <p>{placeData?.main.humidity}</p>
           </div>
-          <div>
+          <div className="flex items-center text-gray-400 bg-[rgba(0,0,0,.25)] p-6 rounded-lg w-1/2 justify-between">
             <p>pressure</p>
             <p>{placeData?.main.pressure}</p>
           </div>
-          <div>
-            <p>Visibility</p>
+          <div className="flex items-center text-gray-400 bg-[rgba(0,0,0,.25)] p-6 rounded-lg w-1/3 justify-between">
+            <p className="">Visibility</p>
             <p>{placeData?.visibility}</p>
           </div>
-          <div>
-            <p>Wind Speed</p>
+          <div className="flex items-center text-gray-400 bg-[rgba(0,0,0,.25)] p-6 rounded-lg justify-between w-1/3">
+            <p >Wind Speed</p>
             <p>{placeData?.wind.speed} km/hr</p>
           </div>
         </div>
