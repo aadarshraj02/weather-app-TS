@@ -70,6 +70,11 @@ export default function Home() {
           </div>
         </div>
       }
+      {
+        placeData && <div className="section2">
+          
+        </div>
+      }
     </div>
   );
 }
