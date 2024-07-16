@@ -50,7 +50,7 @@ export default function Home() {
       </div>
       {placeData && (
         <div className="row w-full flex justify-between items-center p-3 gap-10">
-          <div className="section1 flex justify-around items-center text-gray-400 bg-[rgba(0,0,0,.25)] px-5 w-2/3 rounded-2xl">
+          <div className="section1 flex justify-between items-center text-gray-400 bg-[rgba(0,0,0,.25)] px-5 w-2/3 rounded-2xl">
             <div className="section11 flex items-center justify-center  " >
               <img className="h-[70px]"
                 src={`http://openweathermap.org/img/wn/${placeData.weather[0].icon}@2x.png`}
@@ -66,22 +66,22 @@ export default function Home() {
               <p>{placeData?.weather[0].main}</p>
             </div>
           </div>
-          <div className="time-div flex items-center justify-center w-1/3 bg-red-500  text-gray-400 bg-[rgba(0,0,0,.25)] px-5 rounded-2xl h-[70px]">
+          <div className="time-div flex items-center justify-center w-1/3  text-gray-400 bg-[rgba(0,0,0,.25)] px-5 rounded-2xl h-[70px]">
             <p className="time">{currentTime}</p>
           </div>
         </div>
       )}
       {placeData && (
-        <div className="section2">
-          <div>
+        <div className="section2 bg-red-500 flex justify-between p-5 gap-10 w-full flex-wrap ">
+          <div className="flex items-center text-gray-400 bg-[rgba(0,0,0,.25)] p-6 rounded-lg w-1/3 justify-between">
             <p>Temperature</p>
             <p>{(placeData?.main.temp - 273.15).toFixed(1)} °C</p>
           </div>
-          <div>
+          <div className="flex items-center text-gray-400 bg-[rgba(0,0,0,.25)] p-6 rounded-lg w-1/3 justify-between">
             <p>Temperature Min</p>
             <p>{(placeData?.main.temp_min - 273.15).toFixed(1)} °C</p>
           </div>
-          <div>
+          <div className="flex items-center text-gray-400 bg-[rgba(0,0,0,.25)] p-6 rounded-lg w-1/3 justify-between">
             <p>Temperature Max</p>
             <p>{(placeData?.main.temp_max - 273.15).toFixed(1)} °C</p>
           </div>
