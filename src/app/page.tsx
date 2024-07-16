@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
@@ -30,7 +31,7 @@ export default function Home() {
   };
   useEffect(() => {
     getWeatherData();
-  }, [place]);
+  }, []);
 
   return (
     <div className="h-screen bg-[url('https://images.unsplash.com/photo-1601225691237-b0a1dfa036e0?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center flex flex-col items-center">
@@ -52,7 +53,12 @@ export default function Home() {
       {
         placeData && <div className="row">
           <div className="section1">
-            <div className="section11"></div>
+            <div className="section11">
+            <img
+                src={`http://openweathermap.org/img/wn/${placeData.weather[0].icon}@2x.png`}
+                alt={placeData.weather[0].description}
+              />
+            </div>
             <div className="section11"></div>
           </div>
           <div className="time-div">
