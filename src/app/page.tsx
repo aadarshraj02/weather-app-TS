@@ -49,6 +49,14 @@ export default function Home() {
           <IoSearch />
         </button>
       </div>
+      {
+        placeData && <div className="row">
+          <div className="section1">
+            <div className="section11"></div>
+            <div className="section11"></div>
+          </div>
+        </div>
+      }
     </div>
   );
 }
