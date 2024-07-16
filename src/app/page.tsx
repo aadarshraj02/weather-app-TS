@@ -49,36 +49,6 @@ export default function Home() {
           <IoSearch />
         </button>
       </div>
-      {
-        placeData && placeData.list && placeData.list.length > 0 && (
-          <div>
-            <div>
-              <div>
-                {
-                  placeData.list[0].weather[0].main === 'Clouds' && <FaCloud />
-                }
-                {
-                  placeData.list[0].weather[0].main === 'Clear' && <FaSun />
-                }
-                {
-                  placeData.list[0].weather[0].main === 'Haze' && <FaSmog />
-                }
-                {
-                  placeData.list[0].weather[0].main === 'Smoke' && <FaSmog />
-                }
-                {
-                  placeData.list[0].weather[0].main === 'Mist' && <FaCloudSun />
-                }
-
-                <p>{(placeData?.main.temp-273.15).toFixed(1)} <span>°C</span></p>
-              </div>
-              <div className="time-div">
-                <p className="time">{currentTime}</p>
-              </div>
-            </div>
-          </div>
-        )
-      }
     </div>
   );
 }
