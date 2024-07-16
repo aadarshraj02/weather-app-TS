@@ -62,6 +62,7 @@ export default function Home() {
 
             <div className="section11">
               <p>{placeData?.name}</p>
+              <p>{placeData?.weather[0].main}</p>
             </div>
           </div>
           <div className="time-div">
