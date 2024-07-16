@@ -49,7 +49,7 @@ export default function Home() {
         </button>
       </div>
       {placeData && (
-        <div className="row w-full flex justify-between items-center p-3">
+        <div className="row w-full flex justify-between items-center p-3 gap-10">
           <div className="section1 flex justify-around items-center text-gray-400 bg-[rgba(0,0,0,.25)] px-5 w-2/3 rounded-2xl">
             <div className="section11 flex items-center justify-center  " >
               <img className="h-[70px]"
@@ -61,12 +61,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="section11  flex items-center justify-center gap-10">
+            <div className="section11  flex items-center justify-center gap-10 ">
               <p>{placeData?.name}</p>
               <p>{placeData?.weather[0].main}</p>
             </div>
           </div>
-          <div className="time-div flex items-center justify-center w-1/2 bg-red-500">
+          <div className="time-div flex items-center justify-center w-1/3 bg-red-500  text-gray-400 bg-[rgba(0,0,0,.25)] px-5 rounded-2xl h-[70px]">
             <p className="time">{currentTime}</p>
           </div>
         </div>
