@@ -97,6 +97,10 @@ export default function Home() {
             <p>Visibility</p>
             <p>{placeData?.visibility}</p>
           </div>
+          <div>
+            <p>Wind Speed</p>
+            <p>{placeData?.wind.speed} km/hr</p>
+          </div>
         </div>
       )}
     </div>
