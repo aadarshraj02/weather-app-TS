@@ -85,6 +85,10 @@ export default function Home() {
             <p>Temperature Max</p>
             <p>{(placeData?.main.temp_max - 273.15).toFixed(1)} °C</p>
           </div>
+          <div>
+            <p>Humidity</p>
+            <p>{placeData?.main.humidity}</p>
+          </div>
         </div>
       )}
     </div>
