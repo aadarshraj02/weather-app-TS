@@ -5,7 +5,6 @@
 import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 
-
 let weatherApiKey = "8f6200216e7a219e044fb1179fea87b6";
 
 export default function Home() {
@@ -49,15 +48,17 @@ export default function Home() {
           <IoSearch />
         </button>
       </div>
-      {
-        placeData && <div className="row">
+      {placeData && (
+        <div className="row">
           <div className="section1">
             <div className="section11">
-            <img
+              <img
                 src={`http://openweathermap.org/img/wn/${placeData.weather[0].icon}@2x.png`}
                 alt={placeData.weather[0].description}
               />
-              <p>{(placeData?.main.temp -273.5).toFixed(1)} <span>°C</span></p>
+              <p>
+                {(placeData?.main.temp - 273.5).toFixed(1)} <span>°C</span>
+              </p>
             </div>
 
             <div className="section11">
@@ -69,12 +70,15 @@ export default function Home() {
             <p className="time">{currentTime}</p>
           </div>
         </div>
-      }
-      {
-        placeData && <div className="section2">
-          
+      )}
+      {placeData && (
+        <div className="section2">
+          <div>
+            <p>Temperature</p>
+            <p>{(placeData?.main.temp - 273.15).toFixed(1)} °C</p>
+          </div>
         </div>
-      }
+      )}
     </div>
   );
 }
