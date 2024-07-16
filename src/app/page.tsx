@@ -93,6 +93,10 @@ export default function Home() {
             <p>pressure</p>
             <p>{placeData?.main.pressure}</p>
           </div>
+          <div>
+            <p>Visibility</p>
+            <p>{placeData?.visibility}</p>
+          </div>
         </div>
       )}
     </div>
