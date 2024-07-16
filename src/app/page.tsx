@@ -55,6 +55,9 @@ export default function Home() {
             <div className="section11"></div>
             <div className="section11"></div>
           </div>
+          <div className="time-div">
+            <div className="time"></div>
+          </div>
         </div>
       }
     </div>
