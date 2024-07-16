@@ -35,13 +35,13 @@ export default function Home() {
     <div className="h-screen bg-[url('https://images.unsplash.com/photo-1601225691237-b0a1dfa036e0?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center flex flex-col items-center">
       <div className="flex bg-[rgba(0,0,0,0.25)] px-2 py-2 items-center rounded-2xl mt-10">
         <input
-          className="bg-transparent outline-none text-white p-2"
+          className="bg-transparent outline-none text-zinc-300 p-2"
           type="search"
           placeholder="City Name"
           onChange={(e) => setPlace(e.target.value)}
         />
         <button
-          className="flex items-center text-gray-500 gap-2"
+          className="flex items-center text-zinc-300 gap-2"
           onClick={getWeatherData}
         >
           Search
