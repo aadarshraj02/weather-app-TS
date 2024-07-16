@@ -2,10 +2,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
-import { FaCloud, FaSun, FaSmog, FaCloudSun } from "react-icons/fa";
+
 
 let weatherApiKey = "8f6200216e7a219e044fb1179fea87b6";
 
@@ -58,7 +57,9 @@ export default function Home() {
                 src={`http://openweathermap.org/img/wn/${placeData.weather[0].icon}@2x.png`}
                 alt={placeData.weather[0].description}
               />
+              <p>{(placeData.main.temp -273.5).toFixed(1)} <span>°C</span></p>
             </div>
+
             <div className="section11"></div>
           </div>
           <div className="time-div">
