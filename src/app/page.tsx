@@ -70,6 +70,9 @@ export default function Home() {
                   placeData.list[0].weather[0].main === 'Mist' && <FaCloudSun />
                 }
               </div>
+              <div className="time-div">
+                <p className="time">{currentTime}</p>
+              </div>
             </div>
           </div>
         )
