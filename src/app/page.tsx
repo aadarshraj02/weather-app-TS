@@ -56,7 +56,7 @@ export default function Home() {
             <div className="section11"></div>
           </div>
           <div className="time-div">
-            <div className="time"></div>
+            <p className="time">{currentTime}</p>
           </div>
         </div>
       }
