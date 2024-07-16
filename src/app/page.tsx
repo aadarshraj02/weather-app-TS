@@ -4,7 +4,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
-import { FaCloud } from "react-icons/fa";
+import { FaCloud, FaSun, FaSmog, FaCloudSun } from "react-icons/fa";
 
 let weatherApiKey = "8f6200216e7a219e044fb1179fea87b6";
 
@@ -49,64 +49,30 @@ export default function Home() {
           <IoSearch />
         </button>
       </div>
-      {placeData && (
-        <div className="row">
-          <div className="section1">
-            <div className="section11">
-              {placeData.weather[0].main === "Clouds" && <FaCloud></FaCloud>}
-              {placeData.weather[0].main === "Haze" && <FaCloud></FaCloud>}
-              {placeData.weather[0].main === "Smokey" && <FaCloud></FaCloud>}
-              {placeData.weather[0].main === "Sunny" && <FaCloud></FaCloud>}
-              {placeData.weather[0].main === "Clear" && <FaCloud></FaCloud>}
-              <p>{(placeData?.main.temp - 273.15).toFixed(1)} <span>°C</span></p>
+      {
+        placeData && placeData.list && placeData.list.length > 0 && (
+          <div>
+            <div>
+              <div>
+                {
+                  placeData.list[0].weather[0].main === 'Clouds' && <FaCloud />
+                }
+                {
+                  placeData.list[0].weather[0].main === 'Clear' && <FaSun />
+                }
+                {
+                  placeData.list[0].weather[0].main === 'Haze' && <FaSmog />
+                }
+                {
+                  placeData.list[0].weather[0].main === 'Smoke' && <FaSmog />
+                }
+                {
+                  placeData.list[0].weather[0].main === 'Mist' && <FaCloudSun />
+                }
+              </div>
             </div>
-            <div className="section11">
-            <p>{placeData?.name}</p>
-            <p>{placeData?.weather[0].main}</p>
-            </div>
           </div>
-          <div className="time-div">
-            <p className="time">{currentTime}</p>
-          </div>
-        </div>
-      )}
-       {
-        placeData &&
-        <div>
-          <div>
-            <p>Temperature</p>
-            <p>{(placeData?.main.temp - 273.15).toFixed(1)} °C</p>
-          </div>
-
-          <div>
-            <p >Temperature Min</p>
-            <p >{(placeData?.main.temp_min - 273.15).toFixed(1)} °C</p>
-          </div>
-
-          <div>
-            <p >Temperature Max</p>
-            <p >{(placeData?.main.temp_max - 273.15).toFixed(1)} °C</p>
-          </div>
-
-          <div>
-            <p >Humidity</p>
-            <p >{placeData?.main.humidity}</p>
-          </div>
-
-          <div >
-            <p >pressure</p>
-            <p>{placeData?.main.pressure}</p>
-          </div>
-
-          <div>
-            <p >Visibility</p>
-            <p>{placeData?.visibility}</p>
-          </div>
-          <div >
-            <p>Wind Speed</p>
-            <p>{placeData?.wind.speed} km/hr</p>
-          </div>
-        </div>
+        )
       }
     </div>
   );
